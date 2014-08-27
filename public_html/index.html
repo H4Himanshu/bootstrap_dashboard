@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <style>
+            .header{
+                background-color: grey;   
+                height: 50px;
+            }
+            .navigation{
+                height:600px;
+                background-color:whitesmoke;
+            }
+            #navigation-rows{
+                padding-left: 5px;
+            }
+        </style>
+        
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+       
+    </head>
+    <body>
+        <div class="row body-row">
+            <div class="col-md-12 header row">
+                
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                      <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+                    </div>
+                
+            </div>  
+            <div class="col-md-12">
+
+                <div class="row">
+                    <div class="col-md-2 navigation" >
+
+                        <ul class="nav nav-stacked row">
+                            <li class="active" id="navigation-rows"><a class="navigation-links" id="Page.html"  >Page1</a></li>
+                            <li id="navigation-rows"><a class="navigation-links" id="Page2.html">Page2</a></li>
+                            <li id="navigation-rows"><a class="navigation-links" id="link-3" href="#">Messages</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-10" id="container">
+                        <div class="main-container">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+ <script>
+            
+                $(".navigation-links").click(function(){
+                    $(".main-container").load(this.id, function(){
+                    })
+                    
+                })
+            </script>
+    </body>
+
+</html>
